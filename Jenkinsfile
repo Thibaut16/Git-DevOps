@@ -1,9 +1,10 @@
 pipeline {
-    agent any
+    agent { label 'built-in' }
+
     stages {
         stage('Test') {
             steps {
-                echo 'Jenkinsfile is being executed'
+                echo 'Pipeline is running 🎉'
             }
         }
     }

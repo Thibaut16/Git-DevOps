@@ -1,10 +1,11 @@
 pipeline {
-    agent { label 'built-in' }
-
+    agent any
     stages {
-        stage('Test') {
+        stage('DEBUG') {
             steps {
-                echo 'Pipeline is running 🎉'
+                echo 'Jenkinsfile wird ausgeführt ✅'
+                sh 'whoami'
+                sh 'pwd'
             }
         }
     }
